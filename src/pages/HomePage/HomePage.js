@@ -24,6 +24,10 @@ function HomePage() {
     <p></p>
 
     <h5>The perfect student job.</h5>
+    <p></p>
+    <p></p>
+    <p></p>
+    
     </div>
               </div>
           </div>

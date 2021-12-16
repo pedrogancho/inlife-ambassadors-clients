@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import AddApartmentPage from "../AddApartmentPage/AddApartmentPage";
 
-const apiURL = "http://localhost:5005";
+const apiURL = process.env._REACT_APP_SERVER_URL;
 
 function ApartmentsPage() {
   const [apartments, setApartments] = useState([]);
