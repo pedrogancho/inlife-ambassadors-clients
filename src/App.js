@@ -1,5 +1,5 @@
 import "./App.css";
-//import "./Styles.scss";
+import "./Styles.scss";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
@@ -11,7 +11,6 @@ import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import AllApartmentsPage from "./pages/AllApartmentsPage/AllApartmentsPage";
 import AddApartmentPage from "./pages/AddApartmentPage/AddApartmentPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
-
 import IsPrivate from './components/IsPrivate/IsPrivate';
 import IsAnon from "./components/IsAnon/IsAnon";
 
