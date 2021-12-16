@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./SignupStyles.scss";
-import logo from "../../assets/images/logo.svg"
+import logo from "../../assets/images/logo.svg";
 import authService from "../../services/auth.service";
 
 function SignupPage(props) {
@@ -23,18 +23,16 @@ function SignupPage(props) {
       // Create an object representing the request body
       const requestBody = { email, password, name };
 
-      const authToken = localStorage.getItem('authToken');
+      const authToken = localStorage.getItem("authToken");
       await axios.post(
-        `${process.env.REACT_APP_SERVER_URL}/auth/signup`
-        ,
+        `${process.env.REACT_APP_SERVER_URL}/auth/signup`,
         requestBody,
-        { headers: { Authorization: `Bearer ${authToken}`} }
-      )
+        { headers: { Authorization: `Bearer ${authToken}` } }
+      );
 
       // or with a service
       // await authService.signup(requestBody);
 
-      
       // If the request is successful navigate to login page
       navigate("/login");
     } catch (error) {
@@ -51,9 +49,9 @@ function SignupPage(props) {
             <div className="brand-logo">
               <img src={logo} alt="logo" />
             </div>
-      <h3>Sign Up now and become an Inlife Associate!</h3>
+            <h3>Sign Up now and become an Inlife Associate!</h3>
 
-      <form className="pt-3">
+            <form className="pt-3">
               <div className="form-group">
                 <label>Name</label>
                 <div className="input-group">
@@ -69,61 +67,57 @@ function SignupPage(props) {
                     placeholder="Your Name"
                     name="name"
                     value={name}
-                    onSubmit={handleName}
+                    onChange={handleName}
                   />
                 </div>
               </div>
-        <form className="pt-3">
-              <div className="form-group">
-                <label>Email</label>
-                <div className="input-group">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text border-right-0">
-                      <i className="mdi mdi-account-outline text-primary" />
-                    </span>
+              <form className="pt-3">
+                <div className="form-group">
+                  <label>Email</label>
+                  <div className="input-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text border-right-0">
+                        <i className="mdi mdi-account-outline text-primary" />
+                      </span>
+                    </div>
+                    <input
+                      type="email"
+                      className="form-control form-control-lg border-left-0"
+                      id="email"
+                      placeholder="Your Email"
+                      name="email"
+                      value={email}
+                      onChange={handleEmail}
+                    />
                   </div>
-                  <input
-                    type="email"
-                    className="form-control form-control-lg border-left-0"
-                    id="email"
-                    placeholder="Your Email"
-                    name="email"
-                    value={email}
-                    onSubmit={handleEmail}
-                  />
                 </div>
-              </div>
-              <div className="form-group">
-                <label>Password</label>
-                <div className="input-group">
-                  <div className="input-group-prepend">
-                    <span className="input-group-text border-right-0">
-                      <i className="mdi mdi-account-outline text-primary" />
-                    </span>
+                <div className="form-group">
+                  <label>Password</label>
+                  <div className="input-group">
+                    <div className="input-group-prepend">
+                      <span className="input-group-text border-right-0">
+                        <i className="mdi mdi-account-outline text-primary" />
+                      </span>
+                    </div>
+                    <input
+                      type="password"
+                      className="form-control form-control-lg border-left-0"
+                      id="password"
+                      placeholder="Your Password"
+                      name="password"
+                      value={password}
+                      onChange={handlePassword}
+                    />
                   </div>
-                  <input
-                    type="password"
-                    className="form-control form-control-lg border-left-0"
-                    id="password"
-                    placeholder="Your Password"
-                    name="password"
-                    value={password}
-                    onSubmit={handlePassword}
-                  />
                 </div>
-              </div>
 
+                <button type="submit">Sign Up</button>
+              </form>
 
-        <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
+              {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-        <button type="submit">Sign Up</button>
-      </form>
-
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-      <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link>
+              <p>Already have account?</p>
+              <Link to={"/login"}> Login</Link>
             </form>
           </div>
         </div>
