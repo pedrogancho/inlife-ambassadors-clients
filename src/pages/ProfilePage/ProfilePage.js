@@ -2,7 +2,7 @@ import axios from "axios"
 import { useState, useEffect, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
-// import styles from "./ProfilePage.scss";
+import styles from "./ProfilePage.scss";
 const authToken = localStorage.getItem("authToken");
 function ProfilePage() {
     const [imageUrl, setImageUrl] = useState(""); // <-- used for image upload input
