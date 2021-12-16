@@ -43,20 +43,77 @@ function SignupPage(props) {
   };
 
   return (
-    <div className="SignupPage">
+    <div className="d-flex align-items-stretch auth auth-img-bg h-100">
+      <div className="row flex-grow">
+        <div className="col-lg-6 d-flex align-items-center justify-content-center">
+          <div className="auth-form-transparent text-left p-3">
+            <div className="brand-logo">
+              <img src={logo} alt="logo" />
+            </div>
       <h3>Sign Up now and become an Inlife Associate!</h3>
 
-      <form onSubmit={handleSignupSubmit}>
-        <label>Email:</label>
-        <input type="text" name="email" value={email} onChange={handleEmail} />
+      <form className="pt-3">
+              <div className="form-group">
+                <label>Name</label>
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text border-right-0">
+                      <i className="mdi mdi-account-outline text-primary" />
+                    </span>
+                  </div>
+                  <input
+                    type="name"
+                    className="form-control form-control-lg border-left-0"
+                    id="name"
+                    placeholder="Your Name"
+                    name="name"
+                    value={name}
+                    onSubmit={handleName}
+                  />
+                </div>
+              </div>
+        <form className="pt-3">
+              <div className="form-group">
+                <label>Email</label>
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text border-right-0">
+                      <i className="mdi mdi-account-outline text-primary" />
+                    </span>
+                  </div>
+                  <input
+                    type="email"
+                    className="form-control form-control-lg border-left-0"
+                    id="email"
+                    placeholder="Your Email"
+                    name="email"
+                    value={email}
+                    onSubmit={handleEmail}
+                  />
+                </div>
+              </div>
 
-        <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
+              form className="pt-3">
+              <div className="form-group">
+                <label>Password</label>
+                <div className="input-group">
+                  <div className="input-group-prepend">
+                    <span className="input-group-text border-right-0">
+                      <i className="mdi mdi-account-outline text-primary" />
+                    </span>
+                  </div>
+                  <input
+                    type="password"
+                    className="form-control form-control-lg border-left-0"
+                    id="password"
+                    placeholder="Your Password"
+                    name="password"
+                    value={password}
+                    onSubmit={handlePassword}
+                  />
+                </div>
+              </div>
+
 
         <label>Name:</label>
         <input type="text" name="name" value={name} onChange={handleName} />
@@ -68,6 +125,11 @@ function SignupPage(props) {
 
       <p>Already have account?</p>
       <Link to={"/login"}> Login</Link>
+            </form>
+          </div>
+        </div>
+        <div className="col-lg-6 login-half-bg d-flex flex-row"></div>
+      </div>
     </div>
   );
 }
