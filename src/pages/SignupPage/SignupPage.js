@@ -63,7 +63,7 @@ function SignupPage(props) {
                     </span>
                   </div>
                   <input
-                    type="name"
+                    type="text"
                     className="form-control form-control-lg border-left-0"
                     id="name"
                     placeholder="Your Name"
