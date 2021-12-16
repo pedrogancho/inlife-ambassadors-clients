@@ -17,7 +17,8 @@ function AuthProviderWrapper({ children }) {
 
       if (storedToken) {
         const response = await axios.get(
-          "http://localhost:5005/auth/verify",
+          `${process.env.REACT_APP_SERVER_URL}auth/verify`,
+          // updated
           { headers: { Authorization: `Bearer ${storedToken}` } }
         );
 
@@ -56,7 +57,6 @@ function AuthProviderWrapper({ children }) {
   useEffect(() => {
     verifyStoredToken();
   }, []);
-
 
   return (
     <AuthContext.Provider
