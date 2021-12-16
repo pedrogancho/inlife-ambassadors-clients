@@ -51,7 +51,7 @@ function SignupPage(props) {
             </div>
             <h3>Sign Up now and become an Inlife Associate!</h3>
 
-            <form className="pt-3">
+            <form className="pt-3" onSubmit={handleSignupSubmit}>
               <div className="form-group">
                 <label>Name</label>
                 <div className="input-group">
