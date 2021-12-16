@@ -4,7 +4,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
-import "./Styles.scss";
+// import "./Styles.scss";
 import logo from "../../assets/images/logo.svg"
 import authService from "../../services/auth.service";
 

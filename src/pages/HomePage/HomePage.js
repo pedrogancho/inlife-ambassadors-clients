@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
-import "./HomePage.scss";
+//import "./HomePage.scss";
 import logo from "../../assets/images/logo.svg"
 
 function HomePage() {
