@@ -1,0 +1,95 @@
+.auth {
+    height: 100%;
+    .login-half-bg {
+      background: url("../../assets/images/backoffice_bg.jpg");
+      background-size: cover;
+    }
+    .lock-profile-img {
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+    }
+    .auth-form-light {
+      background: white;
+      select {
+        color: #b9b8b8;
+      }
+      .input-group {
+        .form-control {
+          &:focus,
+          &:active {
+            border-color: #dee2e6;
+          }
+        }
+      }
+    }
+    .auth-form-transparent {
+      background: transparent;
+      .form-control,
+      .input-group-text {
+        border-color: #dde4eb;
+        padding: 0 15px;
+        height: 40px;
+  
+        &:focus,
+        &:active {
+          border-color: #dde4eb;
+        }
+      }
+      select {
+        outline-color: #dde4eb;
+      }
+    }
+    &.auth-img-bg {
+      padding: 0;
+      background-color: #1d3077;
+      color: white;
+  
+      .auth-form-transparent {
+        @media (min-width: 768px) {
+          width: 55%;
+          margin: auto;
+        }
+      }
+    }
+    .brand-logo {
+      margin-bottom: 2rem;
+      img {
+        width: 100px;
+      }
+    }
+    form {
+      .form-group {
+        margin-bottom: 1.5rem;
+        label {
+          font-size: 0.8125rem;
+        }
+        .form-control {
+          border-radius: 0;
+          font-size: 0.9375rem;
+        }
+        .input-group {
+          box-shadow: 0 0 17px 1px rgba(33, 153, 211, 0.35);
+        }
+      }
+      .auth-form-btn {
+        padding: 0.5rem 3rem;
+        line-height: 1.5;
+        position: relative;
+  
+        i {
+          position: absolute;
+          left: 15px;
+          &:before {
+            animation-duration: 1s;
+          }
+        }
+      }
+      .auth-link {
+        font-size: 14px;
+        &:hover {
+          color: initial;
+        }
+      }
+    }
+  }

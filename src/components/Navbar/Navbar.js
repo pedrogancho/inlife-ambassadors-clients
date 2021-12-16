@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import { useContext } from "react";
 import { AuthContext } from "../../context/auth.context";
+import ApartmentsPage from "../../pages/AllApartmentsPage/AllApartmentsPage";
 
 function Navbar() {
   // Get the value from the context
@@ -15,6 +16,9 @@ function Navbar() {
 
       {isLoggedIn && (
         <>
+          <Link to="/allapartments">
+            <button>Apartments</button>
+          </Link>
           <button onClick={logOutUser}>Logout</button>
         </>
       )}

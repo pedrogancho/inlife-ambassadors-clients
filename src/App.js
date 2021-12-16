@@ -8,6 +8,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
+import AllApartmentsPage from "./pages/AllApartmentsPage/AllApartmentsPage";
+import AddApartmentPage from "./pages/AddApartmentPage/AddApartmentPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 
 import IsPrivate from './components/IsPrivate/IsPrivate';
@@ -22,10 +24,11 @@ function App() {
         <Route path="/" element={<HomePage />} />
 
         <Route path="/profile" element={<IsPrivate> <ProfilePage /> </IsPrivate>} />
+        <Route path="/allapartments" element={<IsPrivate> <AllApartmentsPage /> </IsPrivate>} />
+        <Route path="/addapartment" element={<IsPrivate> <AddApartmentPage /> </IsPrivate>} />
 
         <Route path="/signup" element={<IsAnon> <SignupPage /> </IsAnon>} />
         <Route path="/login" element={<IsAnon> <LoginPage /> </IsAnon>} />
-
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </div>

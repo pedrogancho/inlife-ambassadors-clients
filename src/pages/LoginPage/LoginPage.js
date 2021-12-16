@@ -59,7 +59,7 @@ function LoginPage(props) {
             <div className="brand-logo">
               <img src={logo} alt="logo" />
             </div>
-            <h4>Ambassadors Inlife</h4>
+            <h4>Associates Inlife</h4>
             <form className="pt-3">
               <div className="form-group">
                 <label>Email</label>

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import "./SignupStyles.scss";
 import authService from "../../services/auth.service";
 
 function SignupPage(props) {
@@ -43,7 +43,7 @@ function SignupPage(props) {
 
   return (
     <div className="SignupPage">
-      <h1>Sign Up</h1>
+      <h3>Sign Up now and become an Inlife Associate!</h3>
 
       <form onSubmit={handleSignupSubmit}>
         <label>Email:</label>
