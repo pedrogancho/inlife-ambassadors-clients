@@ -106,8 +106,7 @@ function LoginPage(props) {
                     (loggingIn ? " disabled" : "")
                   }
                   onClick={handleLoginSubmit}
-                >
-                  LOGIN
+                >LOGIN
                   {loggingIn && <i className="mdi mdi-loading mdi-spin" />}
                 </div>
               </div>

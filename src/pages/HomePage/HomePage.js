@@ -18,6 +18,12 @@ function HomePage() {
             <h2>Associates</h2>
     <h5>The perfect student job.
     <p> Make a side income and develop new skills while studying.</p> </h5>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <h5>The perfect student job.</h5>
     </div>
               </div>
           </div>
