@@ -71,7 +71,7 @@ function SignupPage(props) {
                   />
                 </div>
               </div>
-              <form className="pt-3">
+              
                 <div className="form-group">
                   <label>Email</label>
                   <div className="input-group">
@@ -112,13 +112,16 @@ function SignupPage(props) {
                 </div>
 
                 <button type="submit">Sign Up</button>
+
+
+
               </form>
 
               {errorMessage && <p className="error-message">{errorMessage}</p>}
 
               <p>Already have account?</p>
               <Link to={"/login"}> Login</Link>
-            </form>
+            
           </div>
         </div>
         <div className="col-lg-6 login-half-bg d-flex flex-row"></div>
