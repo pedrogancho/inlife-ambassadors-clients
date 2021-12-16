@@ -11,7 +11,7 @@ function ApartmentsPage() {
     const fetchData = async () => {
       const response = await axios.get(`${apiURL}/api/apartments`);
       const apartmentsData = response.data;
-      console.log(apartmentsData);
+    
       setApartments(apartmentsData);
     };
 
@@ -29,7 +29,7 @@ function ApartmentsPage() {
             <div key={oneApartment._id} className="card">
               <img src={oneApartment.img} alt="" />
               <h3> {oneApartment.title} </h3>
-              <p>Price: {oneApartment.pricePerDay} $</p>
+              <p>Price: {oneApartment.pricePerMonth} $</p>
             </div>
           );
         })}
