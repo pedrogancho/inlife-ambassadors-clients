@@ -93,8 +93,6 @@ function SignupPage(props) {
                   />
                 </div>
               </div>
-
-              form className="pt-3">
               <div className="form-group">
                 <label>Password</label>
                 <div className="input-group">
