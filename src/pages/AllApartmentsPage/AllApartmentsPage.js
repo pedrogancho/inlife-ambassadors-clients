@@ -41,7 +41,7 @@ function ApartmentsPage() {
               <div className="card">
                 <img src={oneApartment.image} alt="" />
                 <h3> {oneApartment.name} </h3>
-                <p>Price: {oneApartment.price} $</p>
+                <p>Price: {oneApartment.price} €</p>
               </div>
             </Link>
           );
