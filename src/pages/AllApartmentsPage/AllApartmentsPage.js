@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AddApartmentPage from "../AddApartmentPage/AddApartmentPage";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-const apiURL = process.env._REACT_APP_SERVER_URL;
+const apiURL = process.env.REACT_APP_SERVER_URL;
 
 function ApartmentsPage() {
   const [apartments, setApartments] = useState([]);
@@ -12,7 +12,7 @@ function ApartmentsPage() {
     const fetchData = async () => {
       const response = await axios.get(`${apiURL}/api/apartments`);
       const apartmentsData = response.data;
-    
+
       setApartments(apartmentsData);
     };
 
@@ -27,12 +27,15 @@ function ApartmentsPage() {
       {apartments &&
         apartments.map((oneApartment) => {
           return (
-            <Link to={"/apartment/details/" + oneApartment._id} key={oneApartment._id} >
-            <div className="card">
-              <img src={oneApartment.img} alt="" />
-              <h3> {oneApartment.title} </h3>
-              <p>Price: {oneApartment.pricePerMonth} $</p>
-            </div>
+            <Link
+              to={"/apartment/details/" + oneApartment._id}
+              key={oneApartment._id}
+            >
+              <div className="card">
+                <img src={oneApartment.img} alt="" />
+                <h3> {oneApartment.title} </h3>
+                <p>Price: {oneApartment.pricePerMonth} $</p>
+              </div>
             </Link>
           );
         })}
