@@ -31,7 +31,7 @@ return (
     <div>
     <h2>Apartment Details</h2>
 
-    <img src={apartment.image} alt="apartment" />
+    <img src={apartment.image} alt="apartment" height="600px" />
     <h3>{ apartment.name}</h3>
     <p>Price: {apartment.price} </p>
     
