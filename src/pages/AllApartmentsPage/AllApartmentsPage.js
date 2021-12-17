@@ -39,9 +39,9 @@ function ApartmentsPage() {
               key={oneApartment._id}
             >
               <div className="card">
-                <img src={oneApartment.img} alt="" />
-                <h3> {oneApartment.title} </h3>
-                <p>Price: {oneApartment.pricePerMonth} $</p>
+                <img src={oneApartment.image} alt="" />
+                <h3> {oneApartment.name} </h3>
+                <p>Price: {oneApartment.price} $</p>
               </div>
             </Link>
           );
