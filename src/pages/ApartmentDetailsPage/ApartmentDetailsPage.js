@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const apiURL = process.env._REACT_APP_SERVER_URL;
+const apiURL = process.env.REACT_APP_SERVER_URL;
 
 function ApartmentDetailsPage() {
 const [apartment, setApartment] = useState(null)
@@ -14,7 +14,7 @@ const navigate = useNavigate();
 useEffect(() => {
 
     const fetchData = async () => {
-        const response = await axios.get(`${apiURL}/apartments/${apartmentId}`); // https://ironbnb-m3.herokuapp.com/apartments/123abc
+        const response = await axios.get(`${apiURL}/api/apartments/${apartmentId}`); // https://ironbnb-m3.herokuapp.com/apartments/123abc
         const oneApartmentData = response.data;
   
         setApartment(oneApartmentData);
