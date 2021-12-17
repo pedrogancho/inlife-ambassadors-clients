@@ -22,12 +22,12 @@ function AddApartmentPage() {
       e.preventDefault();
 
       const newApt = {
-        title: title,
-        pricePerMonth: pricePerMonth,
-        img: img,
+        name: title,
+        price: pricePerMonth,
+        image: img,
       };
 
-      const response = await axios.post(`${apiURL}/api/apartments`, newApt);
+      const response = await axios.post(`${apiURL}/api/apartments`, newApt); // ou await axios.post(`${apiURL}/apartments`, newApt);
       setTitle("");
       setPricePerMonth(1);
       setImg("");
