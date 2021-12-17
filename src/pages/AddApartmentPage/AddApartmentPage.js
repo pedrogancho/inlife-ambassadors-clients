@@ -25,7 +25,7 @@ function AddApartmentPage() {
       img: img
     }
 
-    const response = await axios.post(`/apartments`, newApt);
+    const response = await axios.post(`/apartments`, newApt); // ou await axios.post(`${apiURL}/apartments`, newApt);
     setTitle("");
     setPricePerMonth(1);
     setImg("");

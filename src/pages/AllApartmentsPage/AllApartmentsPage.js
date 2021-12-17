@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import AddApartmentPage from "../AddApartmentPage/AddApartmentPage";
+import {Link} from 'react-router-dom';
 
 const apiURL = process.env._REACT_APP_SERVER_URL;
 
@@ -26,11 +27,13 @@ function ApartmentsPage() {
       {apartments &&
         apartments.map((oneApartment) => {
           return (
-            <div key={oneApartment._id} className="card">
+            <Link to={"/apartment/details/" + oneApartment._id} key={oneApartment._id} >
+            <div className="card">
               <img src={oneApartment.img} alt="" />
               <h3> {oneApartment.title} </h3>
               <p>Price: {oneApartment.pricePerMonth} $</p>
             </div>
+            </Link>
           );
         })}
     </div>
