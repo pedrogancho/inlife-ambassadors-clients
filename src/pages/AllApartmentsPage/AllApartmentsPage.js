@@ -13,6 +13,7 @@ function ApartmentsPage() {
     const fetchData = async () => {
       const response = await axios.get(`${apiURL}/api/apartments`);
       const apartmentsData = response.data;
+      console.log(response.data);
 
       setApartments(apartmentsData);
     };

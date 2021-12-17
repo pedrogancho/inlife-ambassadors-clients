@@ -32,7 +32,7 @@ function AddApartmentPage() {
       setPricePerMonth(1);
       setImg("");
 
-      navigate("/");
+      navigate("/allapartments");
     } catch (error) {
       setErrorMessage("Something went wrong. Try again");
     }
