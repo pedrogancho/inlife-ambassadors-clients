@@ -31,9 +31,9 @@ return (
     <div>
     <h2>Apartment Details</h2>
 
-    <img src={apartment.img} alt="apartment" />
-    <h3>{ apartment.title}</h3>
-    <p>Price: {apartment.pricePerMonth} </p>
+    <img src={apartment.image} alt="apartment" />
+    <h3>{ apartment.name}</h3>
+    <p>Price: {apartment.price} </p>
     
     <button onClick={() => navigate(-1) }>Back</button>
   </div>
