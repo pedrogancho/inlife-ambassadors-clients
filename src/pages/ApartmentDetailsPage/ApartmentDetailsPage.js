@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -9,6 +9,7 @@ const [apartment, setApartment] = useState(null)
 const [isLoading, setIsLoading] = useState(true)
 
 const {apartmentId} = useParams();
+const navigate = useNavigate();
 
 useEffect(() => {
 
